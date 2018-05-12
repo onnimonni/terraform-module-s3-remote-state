@@ -24,12 +24,12 @@ This module will automatically convert `'_' => '-'` for s3 bucket  and `'-' => '
 After you have created you s3 bucket and dynamodb table you need to start using them in your terraform project like this:
 ```hcl
 terraform {
-	backend “s3” {
+	backend "s3" {
 	 	encrypt = true
 	 	bucket = "terraform-example-remote-state"
 	 	dynamodb_table = "terraform_example_remote_state"
-	 	region = eu-west-1
-	 	key = your-project-name-here/terraform/state
+	 	region = "eu-west-1"
+	 	key = "your-project-name-here/terraform/state"
  	}
 }
 ```
